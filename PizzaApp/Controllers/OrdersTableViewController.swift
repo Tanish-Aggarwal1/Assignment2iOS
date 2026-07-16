@@ -33,16 +33,51 @@ class OrdersTableViewController: UIViewController, UITableViewDataSource, UITabl
         }
         
         // MARK: - Table Methods (stubs for now - filled in Step 7)
-        
-        // required by UITableViewDataSource - number of cells
+    
+    // how many cells to display
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return mainDelegate.orders.count
         }
         
-        // required by UITableViewDataSource - what goes in each cell
+        // height of each cell
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return 90
+        }
+    // what goes in each cell
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "orderCell") ?? UITableViewCell()
-            return cell
+            
+            // dequeue custom cell (from prototype in storyboard) with fallback for safety
+            let tableCell = tableView.dequeueReusableCell(withIdentifier: "orderCell") as? OrderCell
+                ?? OrderCell(style: .default, reuseIdentifier: "orderCell")
+            
+            let rowNum = indexPath.row
+            let order = mainDelegate.orders[rowNum]
+            
+            // convert size int to text for display
+            var sizeText = "Unknown"
+            if order.size == 0 { sizeText = "Small" }
+            if order.size == 1 { sizeText = "Medium" }
+            if order.size == 2 { sizeText = "Large" }
+            
+            // fill cell contents
+            tableCell.primaryLabel.text = "\(sizeText) - \(order.deliveryDate ?? "")"
+            tableCell.secondaryLabel.text = "\(order.address ?? "")"
+            tableCell.avatarImageView.image = UIImage(named: order.avatar ?? "")
+            
+            tableCell.accessoryType = .disclosureIndicator
+            
+            return tableCell
+        }
+        
+        // handle tap on a cell - save selection to AppDelegate, then segue to detail
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let rowNum = indexPath.row
+            
+            // save which order was tapped, so OrderDetailViewController can read it
+            mainDelegate.selectedOrder = mainDelegate.orders[rowNum]
+            
+            // trigger the named segue from storyboard
+            performSegue(withIdentifier: "orderCellToDetail", sender: nil)
         }
     
     

@@ -6,7 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EA1B94A830095B4D00A117C8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1B94A730095B4D00A117C8 /* WebKit.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		EA1B94A730095B4D00A117C8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EAB708613006BC970067E958 /* PizzaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,16 +41,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1B94A830095B4D00A117C8 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA1B94A630095B4D00A117C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA1B94A730095B4D00A117C8 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EAB708583006BC970067E958 = {
 			isa = PBXGroup;
 			children = (
 				EAB708633006BC970067E958 /* PizzaApp */,
+				EA1B94A630095B4D00A117C8 /* Frameworks */,
 				EAB708623006BC970067E958 /* Products */,
 			);
 			sourceTree = "<group>";
