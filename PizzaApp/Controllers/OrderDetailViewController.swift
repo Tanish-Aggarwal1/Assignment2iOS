@@ -21,6 +21,8 @@ class OrderDetailViewController: UIViewController {
         @IBOutlet var lblVegToppings: UILabel!
         @IBOutlet var lblAvatar: UILabel!
     
+    var currentOrder: Order?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +31,7 @@ class OrderDetailViewController: UIViewController {
                 let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                 
                 guard let order = mainDelegate.selectedOrder else { return }
-                
+        currentOrder = order
                 // convert size int back into a readable label
                 var sizeText = "Unknown"
                 if order.size == 0 { sizeText = "Small" }
@@ -48,6 +50,35 @@ class OrderDetailViewController: UIViewController {
                 avatarImageView.image = UIImage(named: order.avatar ?? "")
     }
     
+    @IBAction func deleteOrderPressed(_ sender: UIButton) {
+        
+        // ask for confirmation before deleting
+        let confirmAlert = UIAlertController(title: "Delete Order",
+                                              message: "Are you sure you want to delete this order?",
+                                              preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+            guard let order = self.currentOrder else { return }
+            
+            let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+            let success = mainDelegate.deleteOrder(order: order)
+            print("nav controller is: \(String(describing: self.navigationController))")
+            if success {
+                // go back to the Previous Orders table - its viewWillAppear will refresh the list
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                let failAlert = UIAlertController(title: "Error", message: "Could not delete order.", preferredStyle: .alert)
+                failAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(failAlert, animated: true)
+            }
+        })
+        
+        confirmAlert.addAction(cancelAction)
+        confirmAlert.addAction(deleteAction)
+        present(confirmAlert, animated: true)
+    }
     
     /*
     // MARK: - Navigation

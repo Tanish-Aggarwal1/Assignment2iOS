@@ -151,6 +151,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 return returnCode
             }
+    
+    // delete an existing Order row by its ID - same pattern as insertIntoDatabase
+    func deleteOrder(order: Order) -> Bool {
+        var db: OpaquePointer? = nil
+        var returnCode: Bool = true
+        
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK {
+            print("Successfully opened connection to database at \(self.databasePath!)")
+            
+            var deleteStatement: OpaquePointer? = nil
+            let deleteStatementString: String = "delete from Orders where ID = ?"
+            
+            if sqlite3_prepare_v2(db, deleteStatementString, -1, &deleteStatement, nil) == SQLITE_OK {
+                
+                // bind the ID of the order we want to remove
+                sqlite3_bind_int(deleteStatement, 1, Int32(order.id ?? 0))
+                
+                if sqlite3_step(deleteStatement) == SQLITE_DONE {
+                    print("Successfully deleted order with ID \(order.id ?? 0)")
+                } else {
+                    print("Could not delete order.")
+                    returnCode = false
+                }
+                sqlite3_finalize(deleteStatement)
+            } else {
+                print("DELETE statement could not be prepared.")
+                returnCode = false
+            }
+            
+            sqlite3_close(db)
+        } else {
+            print("Unable to open database.")
+            returnCode = false
+        }
+        return returnCode
+    }
 
     // MARK: UISceneSession Lifecycle
 

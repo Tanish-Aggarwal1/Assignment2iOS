@@ -18,6 +18,7 @@ class OrdersTableViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         mainDelegate.readDataFromDatabase()
+        print("Orders table nav controller: \(String(describing: self.navigationController))")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
