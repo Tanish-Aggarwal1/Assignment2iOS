@@ -21,7 +21,7 @@ class WebViewController: UIViewController , WKNavigationDelegate {
                 webView.navigationDelegate = self
                 
                 // load a webpage - change this URL to whatever you like
-                if let urlAddress = URL(string: "https://www.apple.com") {
+                if let urlAddress = URL(string: "https://www.ginospizza.ca") {
                     let request = URLRequest(url: urlAddress)
                     webView.load(request)
                 }

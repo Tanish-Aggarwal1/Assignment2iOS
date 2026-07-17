@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUj-eM-OUa">
-                                <rect key="frame" x="20" y="262" width="353" height="34.333333333333314"/>
+                                <rect key="frame" x="20" y="417" width="353" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Place Order"/>
                                 <connections>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgW-Mn-O9Y">
-                                <rect key="frame" x="20" y="316.33333333333331" width="353" height="35"/>
+                                <rect key="frame" x="20" y="471.33333333333331" width="353" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Settings"/>
                                 <connections>
@@ -36,29 +36,61 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmb-fy-5eR">
-                                <rect key="frame" x="20" y="371.33333333333331" width="353" height="35"/>
+                                <rect key="frame" x="20" y="526.33333333333337" width="353" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Previous Orders"/>
                                 <connections>
                                     <segue destination="zFH-ve-xy4" kind="show" id="Y35-1D-K7t"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYe-sy-yoU">
+                                <rect key="frame" x="20" y="262" width="353" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Order Pizza">
+                                        <attributes>
+                                            <font key="NSFont" size="32" name="AmericanTypewriter"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO4-Vk-iey">
+                                <rect key="frame" x="20" y="313" width="353" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Best In Town">
+                                        <attributes>
+                                            <font key="NSFont" size="25" name="AmericanTypewriter"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="01S-Lr-kFX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0XM-Gt-0ff"/>
                             <constraint firstItem="rmb-fy-5eR" firstAttribute="top" secondItem="KgW-Mn-O9Y" secondAttribute="bottom" constant="20" id="0nb-5e-tB2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kO4-Vk-iey" secondAttribute="trailing" constant="20" id="1Jz-k8-ajC"/>
                             <constraint firstAttribute="trailing" secondItem="01S-Lr-kFX" secondAttribute="trailing" id="7OM-yP-owc"/>
                             <constraint firstItem="KgW-Mn-O9Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CUp-SR-TdT"/>
                             <constraint firstItem="nUj-eM-OUa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DRn-ZJ-X3G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KgW-Mn-O9Y" secondAttribute="trailing" constant="20" id="DgM-SS-cC7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nUj-eM-OUa" secondAttribute="trailing" constant="20" id="Dnd-ki-JEV"/>
                             <constraint firstItem="KgW-Mn-O9Y" firstAttribute="top" secondItem="nUj-eM-OUa" secondAttribute="bottom" constant="20" id="LCa-Mi-dsq"/>
+                            <constraint firstItem="kO4-Vk-iey" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NLN-NQ-TVp"/>
+                            <constraint firstItem="oYe-sy-yoU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="P2t-yP-TaE"/>
+                            <constraint firstItem="kO4-Vk-iey" firstAttribute="top" secondItem="oYe-sy-yoU" secondAttribute="bottom" constant="14" id="btQ-kh-tMC"/>
                             <constraint firstAttribute="bottom" secondItem="01S-Lr-kFX" secondAttribute="bottom" id="eVw-ew-ju8"/>
+                            <constraint firstItem="oYe-sy-yoU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hGV-o5-cqc"/>
                             <constraint firstItem="rmb-fy-5eR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mi9-pj-wZG"/>
-                            <constraint firstItem="nUj-eM-OUa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="pls-sg-LhK"/>
+                            <constraint firstItem="nUj-eM-OUa" firstAttribute="top" secondItem="kO4-Vk-iey" secondAttribute="bottom" constant="75" id="rOk-fp-YVr"/>
                             <constraint firstItem="01S-Lr-kFX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rVn-2s-WIb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oYe-sy-yoU" secondAttribute="trailing" constant="20" id="tCJ-IZ-F9e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rmb-fy-5eR" secondAttribute="trailing" constant="20" id="vC3-Kf-0f9"/>
                         </constraints>
                     </view>
@@ -487,7 +519,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvi-kL-MXa">
                                 <rect key="frame" x="20" y="212" width="353" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Open Website"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Visit Our Website"/>
                                 <connections>
                                     <segue destination="PAs-R0-ETe" kind="show" id="x1J-TA-YS5"/>
                                 </connections>
