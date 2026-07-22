@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Ginoz Pizza-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,13 +94,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rmb-fy-5eR" secondAttribute="trailing" constant="20" id="vC3-Kf-0f9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ERB-OS-ukc"/>
+                    <navigationItem key="navigationItem" title="Ginoz Pizza" id="ERB-OS-ukc" colorLabel="IBBuiltInLabel-Red"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1817.5572519083969" y="-27.464788732394368"/>
         </scene>
-        <!--Order View Controller-->
+        <!--Place Order-->
         <scene sceneID="blj-fb-Fql">
             <objects>
                 <viewController id="EYn-pa-DHA" customClass="OrderViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -247,13 +247,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar2" translatesAutoresizingMaskIntoConstraints="NO" id="Vf0-BI-9CG">
-                                <rect key="frame" x="167" y="656" width="75" height="87"/>
+                                <rect key="frame" x="144.33333333333334" y="656" width="104.33333333333334" height="184.66666666666663"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar3" translatesAutoresizingMaskIntoConstraints="NO" id="e5R-o3-Am1">
-                                <rect key="frame" x="269" y="656" width="104" height="87"/>
+                                <rect key="frame" x="268.66666666666669" y="656" width="104.33333333333331" height="184.66666666666663"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar1" translatesAutoresizingMaskIntoConstraints="NO" id="zZY-bd-f4k">
-                                <rect key="frame" x="30" y="656" width="84" height="87"/>
+                                <rect key="frame" x="19.999999999999993" y="656" width="104.33333333333331" height="184.66666666666663"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Txf-Tc-0r5"/>
@@ -352,7 +352,7 @@
                             <constraint firstItem="Txf-Tc-0r5" firstAttribute="trailing" secondItem="AaE-ae-Wl6" secondAttribute="trailing" constant="25" id="zkm-ig-YeE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="d0j-ec-ezS"/>
+                    <navigationItem key="navigationItem" title="Place Order" id="d0j-ec-ezS"/>
                     <connections>
                         <outlet property="datePicker" destination="T5l-Ar-qo5" id="Yi7-HY-c9m"/>
                         <outlet property="sizeSegment" destination="ycC-eY-yE5" id="V31-86-XNv"/>
@@ -369,7 +369,7 @@
             </objects>
             <point key="canvasLocation" x="2501.5267175572517" y="-27.464788732394368"/>
         </scene>
-        <!--Orders Table View Controller-->
+        <!--Previous Orders-->
         <scene sceneID="epI-pV-S8c">
             <objects>
                 <viewController id="zFH-ve-xy4" customClass="OrdersTableViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -458,7 +458,7 @@
                             <constraint firstItem="4Am-TX-7Ie" firstAttribute="leading" secondItem="1gQ-vV-8pe" secondAttribute="leading" id="pmO-MC-arL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ET0-Q7-SeF"/>
+                    <navigationItem key="navigationItem" title="Previous Orders" id="ET0-Q7-SeF"/>
                     <connections>
                         <outlet property="tableView" destination="4Am-TX-7Ie" id="I3C-EJ-iPz"/>
                         <segue destination="h9u-e3-juI" kind="show" identifier="orderCellToDetail" id="mru-IM-hek"/>
@@ -468,7 +468,7 @@
             </objects>
             <point key="canvasLocation" x="4527.480916030534" y="-27.464788732394368"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Ginoz Website-->
         <scene sceneID="2Am-zk-1hc">
             <objects>
                 <viewController id="PAs-R0-ETe" customClass="WebViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -484,9 +484,9 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="azk-By-NdX">
-                                <rect key="frame" x="177" y="453" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="azk-By-NdX">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1CY-wG-MM1"/>
@@ -496,9 +496,11 @@
                             <constraint firstItem="S8b-3o-d26" firstAttribute="trailing" secondItem="1CY-wG-MM1" secondAttribute="trailing" id="Nl1-TR-MNa"/>
                             <constraint firstAttribute="bottom" secondItem="S8b-3o-d26" secondAttribute="bottom" id="WNE-dr-MFO"/>
                             <constraint firstItem="S8b-3o-d26" firstAttribute="leading" secondItem="1CY-wG-MM1" secondAttribute="leading" id="WnY-n5-Wu7"/>
+                            <constraint firstItem="azk-By-NdX" firstAttribute="centerX" secondItem="v6A-Hs-5uH" secondAttribute="centerX" id="h4d-NH-D6w"/>
+                            <constraint firstItem="azk-By-NdX" firstAttribute="centerY" secondItem="v6A-Hs-5uH" secondAttribute="centerY" id="ubP-mN-TCv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0cT-Z5-hfC"/>
+                    <navigationItem key="navigationItem" title="Ginoz Website" id="0cT-Z5-hfC"/>
                     <connections>
                         <outlet property="activity" destination="azk-By-NdX" id="cM1-Nx-ehn"/>
                         <outlet property="webView" destination="S8b-3o-d26" id="D7i-rj-OyL"/>
@@ -508,7 +510,7 @@
             </objects>
             <point key="canvasLocation" x="3846.5648854961833" y="-27.464788732394368"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="suQ-lb-NBw">
             <objects>
                 <viewController id="b2E-0w-jOc" customClass="SettingsViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -597,7 +599,7 @@
                             <constraint firstItem="RLL-Jh-jP4" firstAttribute="width" secondItem="TFe-JW-OHE" secondAttribute="width" id="qpP-40-yGq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qKz-7u-Z0r"/>
+                    <navigationItem key="navigationItem" title="Settings" id="qKz-7u-Z0r"/>
                     <connections>
                         <outlet property="tbEmail" destination="hhg-ZX-KY6" id="PoB-Xb-HVJ"/>
                         <outlet property="tbName" destination="CAF-V5-Gfn" id="G6U-Vb-gvK"/>
@@ -626,7 +628,7 @@
             </objects>
             <point key="canvasLocation" x="890.83969465648852" y="-27.464788732394368"/>
         </scene>
-        <!--Order Detail View Controller-->
+        <!--Details-->
         <scene sceneID="kE6-BO-gdX">
             <objects>
                 <viewController id="h9u-e3-juI" customClass="OrderDetailViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -729,7 +731,7 @@
                             <constraint firstItem="ZzG-XW-0PN" firstAttribute="centerX" secondItem="V74-o4-AIQ" secondAttribute="centerX" id="ziE-wf-6JI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="f9M-AX-Kxr"/>
+                    <navigationItem key="navigationItem" title="Details" id="f9M-AX-Kxr"/>
                     <connections>
                         <outlet property="avatarImageView" destination="ZzG-XW-0PN" id="LFy-8v-tBg"/>
                         <outlet property="lblAddress" destination="Tnn-fE-aeH" id="BfP-bu-1w3"/>
@@ -747,14 +749,14 @@
     </scenes>
     <resources>
         <image name="avatar1" width="184.66667175292969" height="184.66667175292969"/>
-        <image name="avatar2" width="140.33332824707031" height="140.33332824707031"/>
+        <image name="avatar2" width="75" height="75"/>
         <image name="avatar3" width="184.66667175292969" height="184.66667175292969"/>
         <image name="homepage" width="284" height="615.33331298828125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

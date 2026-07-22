@@ -28,6 +28,11 @@ class OrderDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         // grab the order the user tapped from AppDelegate
+        
+        navigationController?.navigationBar.titleTextAttributes = [
+                .foregroundColor: UIColor.white,
+                    .font: UIFont.systemFont(ofSize: 24, weight: .bold)
+            ]
                 let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                 
                 guard let order = mainDelegate.selectedOrder else { return }

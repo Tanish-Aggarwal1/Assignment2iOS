@@ -19,6 +19,11 @@ class OrdersTableViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         mainDelegate.readDataFromDatabase()
         print("Orders table nav controller: \(String(describing: self.navigationController))")
+        
+        navigationController?.navigationBar.titleTextAttributes = [
+                .foregroundColor: UIColor.white,
+                    .font: UIFont.systemFont(ofSize: 24, weight: .bold)
+            ]
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
